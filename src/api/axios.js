@@ -2,11 +2,12 @@
 import axios from "axios";
 
 const apiClient = axios.create({
-  baseURL: "http://localhost:8000/api",
+  // Gunakan environment variable di sini
+  baseURL: import.meta.env.VITE_API_URL + '/api',
   withCredentials: true,
   headers: {
     Accept: "application/json",
-    "Content-Type": "application/json",
+    "content-type": "application/json",
   },
 });
 
